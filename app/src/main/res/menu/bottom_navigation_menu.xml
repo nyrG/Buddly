@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeNav"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/recordsNav"
+        android:enabled="true"
+        android:icon="@drawable/expenses"
+        android:title="Expenses"/>
+    <item
+        android:id="@+id/budgetsNav"
+        android:enabled="true"
+        android:icon="@drawable/budgets"
+        android:title="Budgets"/>
+    <item
+        android:id="@+id/profileNav"
+        android:enabled="true"
+        android:icon="@drawable/profile"
+        android:title="Profile"/>
+</menu>
