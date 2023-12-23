@@ -15,6 +15,18 @@ class SharedPref(context: Context) {
 
     private val gson = Gson()
 
+    var balance: Double
+        set(balance) = sharedPref.edit()
+            .putFloat(Constants.PARAM_BALANCE, balance.toFloat()).apply()
+        get() = sharedPref
+            .getFloat(Constants.PARAM_BALANCE, 0.00F).toDouble()
+
+    var totalExpense: Double
+        set(totalExpense) = sharedPref.edit()
+            .putFloat(Constants.PARAM_TOTAL_EXPENSE, totalExpense.toFloat()).apply()
+        get() = sharedPref
+            .getFloat(Constants.PARAM_TOTAL_EXPENSE, 0.00F).toDouble()
+
     fun saveExpenseList(dataList: List<Expense>) {
         val json = gson.toJson(dataList)
         sharedPref.edit().putString(Constants.PARAM_EXPENSE_LIST, json).apply()
@@ -36,7 +48,7 @@ class SharedPref(context: Context) {
     fun loadBudgetList(): List<Budget> {
         val json = sharedPref.getString(Constants.PARAM_BUDGET_LIST, null)
         return if (json != null) {
-            val type = object : TypeToken<List<Expense>>() {}.type
+            val type = object : TypeToken<List<Budget>>() {}.type
             gson.fromJson(json, type)
         } else {
             emptyList()
@@ -47,10 +59,10 @@ class SharedPref(context: Context) {
         val json = gson.toJson(dataList)
         sharedPref.edit().putString(Constants.PARAM_CATEGORY_LIST, json).apply()
     }
-    fun saveCategoryList(): List<Category> {
+    fun loadCategoryList(): List<Category> {
         val json = sharedPref.getString(Constants.PARAM_CATEGORY_LIST, null)
         return if (json != null) {
-            val type = object : TypeToken<List<Expense>>() {}.type
+            val type = object : TypeToken<List<Category>>() {}.type
             gson.fromJson(json, type)
         } else {
             emptyList()

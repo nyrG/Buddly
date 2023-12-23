@@ -7,5 +7,7 @@ class Constants {
         const val PARAM_EXPENSE_LIST = "PARAM_EXPENSE_LIST"
         const val PARAM_BUDGET_LIST = "PARAM_BUDGET_LIST"
         const val PARAM_CATEGORY_LIST = "PARAM_CATEGORY_LIST"
+        const val PARAM_BALANCE = "PARAM_BALANCE"
+        const val PARAM_TOTAL_EXPENSE = "PARAM_TOTAL_EXPENSE"
     }
 }

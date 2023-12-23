@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/notification"
-        android:icon="@drawable/bell"
-        android:title="notification"
+        android:id="@+id/calendar"
+        android:icon="@drawable/calendar"
+        android:title="calendar"
         app:showAsAction="ifRoom" />
 
 </menu>

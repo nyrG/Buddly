@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/splashFragment"
@@ -12,7 +12,26 @@
         tools:layout="@layout/fragment_splash" />
     <fragment
         android:id="@+id/expensesFragment"
-        android:name="com.canque.buddly.expensesFragment"
+        android:name="com.canque.buddly.ExpensesFragment"
         android:label="fragment_expenses"
         tools:layout="@layout/fragment_expenses" />
+    <fragment
+        android:id="@+id/budgetsFragment"
+        android:name="com.canque.buddly.BudgetsFragment"
+        android:label="fragment_budgets"
+        tools:layout="@layout/fragment_budgets" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.canque.buddly.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.canque.buddly.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <action
+        android:id="@+id/actionToExpenses"
+        app:destination="@id/expensesFragment"/>
 </navigation>
